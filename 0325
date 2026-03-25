@@ -1,0 +1,167 @@
+# 2588
+a = int(input())
+b = int(input())
+
+# b의 각 자리 숫자 분리
+one = b % 10          # 일의 자리
+ten = (b // 10) % 10  # 십의 자리
+hund = b // 100       # 백의 자리
+
+print(a * one)
+print(a * ten)
+print(a * hund)
+print(a * b)
+
+# 1212
+n = input()
+print(bin(int(n, 8))[2:])
+
+# 1252
+a, b = input().split()
+result = int(a, 2) + int(b, 2)
+print(bin(result)[2:])
+
+# 1271
+a, b = map(int, input().split())
+print(a // b)  # 몫
+print(a % b)   # 나머지
+
+# 1373
+n = input()
+print(oct(int(n, 2))[2:])
+
+#1455
+n, m = map(int, input().split())
+arr = [list(map(int, input().strip())) for _ in range(n)]
+count = 0
+for i in range(n-1, -1, -1):
+for j in range(m-1, -1, -1):
+if arr[i][j] == 1:
+            
+for x in range(i+1):
+for y in range(j+1):
+arr[x][y] = 1 - arr[x][y]
+count += 1
+
+print(count)
+
+# 2530
+h, m, s = map(int, input().split())
+t = int(input())
+
+total = h * 3600 + m * 60 + s + t
+
+h = (total // 3600) % 24
+m = (total % 3600) // 60
+s = total % 60
+
+print(h, m, s)
+
+# 2903
+n = int(input())
+
+result = (2 ** n + 1) ** 2
+print(result)
+
+# 1330
+a, b = map(int, input().split())
+
+if a > b:
+    print(">")
+elif a < b:
+    print("<")
+else:
+    print("==")
+
+# 9498
+score = int(input())
+
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+elif score >= 60:
+    print("D")
+else:
+    print("F")
+
+# 2753
+year = int(input())
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(1)
+else:
+    print(0)
+
+# 14681
+x = int(input())
+y = int(input())
+
+if x > 0 and y > 0:
+    print(1)
+elif x < 0 and y > 0:
+    print(2)
+elif x < 0 and y < 0:
+    print(3)
+else:
+    print(4)
+
+# 2490
+for _ in range(3):
+    yut = list(map(int, input().split()))
+    
+    zero = yut.count(0)
+
+    if zero == 1:
+        print("A")
+    elif zero == 2:
+        print("B")
+    elif zero == 3:
+        print("C")
+    elif zero == 4:
+        print("D")
+    else:
+        print("E")
+
+# 2839
+n = int(input())
+
+count = 0
+
+while n >= 0:
+    if n % 5 == 0:
+        count += n // 5
+        print(count)
+        break
+    n -= 3
+    count += 1
+else:
+    print(-1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
